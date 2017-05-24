@@ -1,0 +1,32 @@
+// ==============================================================
+// Bases - Forms
+// ==============================================================
+
+input[type='text'],
+input[type='password'] {
+  @include input-variant();
+  @include input-size($input-height, $input-padding-verticle, $input-padding-horizontal, $input-font-size, $input-line-height);
+  @include input-disabled($form-disabled-bg-color, $form-disabled-border-color, $form-disabled-color);
+
+  &.-sm {
+    @include input-size($input-sm-height, $input-sm-padding-verticle, $input-sm-padding-horizontal, $input-sm-font-size, $input-sm-line-height);
+  }
+
+  &.-lg {
+    @include input-size($input-lg-height, $input-lg-padding-verticle, $input-lg-padding-horizontal, $input-lg-font-size, $input-lg-line-height);
+  }
+}
+
+textarea {
+  @include textarea-variant();
+  @include textarea-size($textarea-padding-verticle, $textarea-padding-horizontal, $textarea-font-size, $textarea-line-height);
+  @include input-disabled($form-disabled-bg-color, $form-disabled-border-color, $form-disabled-color);
+
+  &.-sm {
+    @include textarea-size($textarea-sm-padding-verticle, $textarea-sm-padding-horizontal, $textarea-sm-font-size, $textarea-sm-line-height);
+  }
+
+  &.-lg {
+    @include textarea-size($textarea-lg-padding-verticle, $textarea-lg-padding-horizontal, $textarea-lg-font-size, $textarea-lg-line-height);
+  }
+}

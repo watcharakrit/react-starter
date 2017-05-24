@@ -1,0 +1,69 @@
+// ==============================================================
+// Bases - Buttons
+// ==============================================================
+
+
+button {
+  @include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $btn-line-height);
+  @include button-variant($btn-color, $btn-bg-color, $btn-border-color);
+  @include button-disabled($btn-disabled-border-color, $btn-disabled-bg-color, $btn-disabled-color);
+
+  // modified
+  // --------------------------------------------------------------
+  // themes
+  &.-primary {
+    @include button-variant($btn-primary-color, $btn-primary-bg-color, $btn-primary-border-color);
+    @include button-disabled($btn-disabled-border-color, $btn-disabled-bg-color, $btn-disabled-color);
+    @include button-shadow($btn-primary-bg-color);
+  }
+
+  &.-cancel {
+    @include button-variant($btn-cancel-color, $btn-cancel-bg-color, $btn-cancel-border-color);
+    @include button-disabled($btn-disabled-border-color, $btn-disabled-bg-color, $btn-disabled-color);
+    @include button-shadow($btn-cancel-bg-color);
+  }
+
+  &.-success {
+    @include button-variant($btn-success-color, $btn-success-bg-color, $btn-success-border-color);
+    @include button-disabled($btn-disabled-border-color, $btn-disabled-bg-color, $btn-disabled-color);
+  }
+
+  &.-link {
+    @include button-variant($btn-link-color, $btn-link-bg-color, $btn-link-border-color);
+    @include button-disabled($btn-link-disabled-border-color, $btn-link-disabled-bg-color, $btn-link-disabled-color);
+
+    .no-touch &:hover,
+    .touch &.touch {
+      text-decoration: underline;
+    }
+
+    .no-touch &:active,
+    .no-touch &.active,
+    .touch &.touch {
+      color: $btn-link-color-active;
+    }
+  }
+
+  &.-img {
+    padding-top: 15px;
+    padding-bottom: 10px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 5px;
+      width: 39px;
+    }
+  }
+
+
+  // sizes
+  &.-sm {
+    @include button-size($btn-sm-padding-verticle, $btn-sm-padding-horizontal, $btn-sm-font-size, $btn-sm-line-height);
+  }
+
+  &.-lg {
+    @include button-size($btn-lg-padding-verticle, $btn-lg-padding-horizontal, $btn-lg-font-size, $btn-lg-line-height);
+  }
+  // --------------------------------------------------------------
+}

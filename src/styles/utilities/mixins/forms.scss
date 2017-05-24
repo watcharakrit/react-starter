@@ -1,0 +1,74 @@
+// ==============================================================
+// Mixins - Forms
+// ==============================================================
+
+$_border-color: $border-color;
+
+// inputs
+// --------------------------------------------------------------
+@mixin input-variant() {
+  appearance: none;
+  display: block;
+  border-width: 0;
+  border-radius: $input-border-radius;
+  width: 100%;
+  margin-bottom: $input-margin-bottom;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1px $_border-color;
+  color: $color-text-blue;
+  font-family: $font-family-system;
+
+  &:focus,
+  &.focus {
+    position: relative;
+    z-index: $z-index-md;
+    outline: none;
+    box-shadow: inset 0 0 0 1px $color-primary, 0 0 4px $color-primary;
+  }
+
+  &[readonly] {
+    box-shadow: none;
+  }
+}
+
+@mixin input-size($height, $padding-verticle, $padding-horizontal, $font-size, $line-height) {
+  height: $height;
+  padding: $padding-verticle $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// scss-lint:disable QualifyingElement
+@mixin input-disabled($bg-color, $border-color, $color) {
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    border-color: $border-color;
+    background-color: $bg-color;
+    text-decoration: none;
+    color: $color;
+
+    .no-touch &:hover {
+      border-color: $border-color;
+      background-color: $bg-color;
+      text-decoration: none;
+      color: $color;
+    }
+  }
+}
+// --------------------------------------------------------------
+
+// textarea
+// --------------------------------------------------------------
+@mixin textarea-variant() {
+  @include input-variant();
+}
+
+@mixin textarea-size($padding-verticle, $padding-horizontal, $font-size, $line-height) {
+  padding: $padding-verticle $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// --------------------------------------------------------------
+// ==============================================================

@@ -1,0 +1,120 @@
+// ==============================================================
+// Mixins - Button variants
+// --------------------------------------------------------------
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+// ==============================================================
+
+$_margin-bottom: $margin-bottom;
+$_btn-border-width: $btn-border-width;
+$_btn-border-radius: $btn-border-radius;
+
+@mixin button-variant($color, $background, $border) {
+  margin-bottom: $_margin-bottom;
+  border-color: $border;
+  border-style: solid;
+  border-width: $_btn-border-width;
+  background-color: $background;
+  min-width: 222px;
+  color: $color;
+  font-family: $font-family-system;
+  font-size: $font-size;
+  transform: scale(1);
+
+  @include button-state($color, $background, $border);
+}
+
+
+// state: hover & touch
+@mixin button-state($color, $background, $border, $multiple:1) {
+  $_hover: 8%;
+  $_active: 5%;
+  @if $multiple != 1 {
+    $_hover: $_hover * $multiple;
+  }
+
+  &:focus,
+  &.focus {
+    outline: none;
+    border-color: $border;
+    background-color: $background;
+    color: $color;
+  }
+
+  :global(.no-touch) &:hover {
+    background-color: lighten($background, $_hover);
+  }
+
+  :global(.no-touch) &:active,
+  :global(.no-touch) &.active,
+  :global(.touch) &.touch {
+    background-color: lighten($background, $_active);
+  }
+}
+
+// sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height) {
+  border-radius: $_btn-border-radius;
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+
+  &:lang(th) {
+    font-size: $font-size * 1.57;
+  }
+}
+
+// shadow
+@mixin button-shadow($color) {
+  position: relative;
+
+  :global(.no-touch) &:hover {
+    &::after {
+      box-shadow: 0 0 30px lighten(rgba($color, 0.7), 8%);
+    }
+  }
+
+  :global(.no-touch) &:active,
+  :global(.no-touch) &.active,
+  :global(.touch) &.touch {
+    &::after {
+      box-shadow: 0 0 30px lighten(rgba($color, 0.7), 8%);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    z-index: $z-index-under;
+    border-radius: $border-radius * 2;
+    box-shadow: 0 0 30px rgba($color, 0.7);
+    background-color: transparent;
+    width: 80%;
+    height: 50%;
+    content: '';
+  }
+}
+
+// disabled
+// scss-lint:disable QualifyingElement
+@mixin button-disabled($bg-color, $border-color, $color) {
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    border-color: $border-color;
+    background-color: $bg-color;
+    text-decoration: none;
+    color: $color;
+
+    :global(.no-touch) &:hover {
+      border-color: $border-color;
+      background-color: $bg-color;
+      text-decoration: none;
+      color: $color;
+    }
+
+    &::after {
+      box-shadow: 0 0 30px $bg-color !important;
+    }
+  }
+}

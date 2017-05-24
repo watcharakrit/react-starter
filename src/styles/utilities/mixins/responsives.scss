@@ -1,0 +1,21 @@
+// ==============================================================
+// Mixins - Media Query Mixin
+// ==============================================================
+
+@mixin media-sm() {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin media-md() {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin media-lg() {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}

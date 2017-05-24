@@ -1,0 +1,31 @@
+// ==============================================================
+// Mixins - Typography
+// ==============================================================
+
+$_min-font-size: $min-font-size-title;
+
+@function decrease-font-size($font-size, $multiply) {
+  $new-font-size: $font-size * $multiply;
+  @if $new-font-size < $_min-font-size {
+    @return $_min-font-size;
+  } @else {
+    @return $new-font-size;
+  }
+}
+
+// scss-lint:disable VariableForProperty
+@mixin font-size ($font-size) {
+  font-size: decrease-font-size($font-size, 0.4);
+
+  @include media-sm () {
+    font-size: decrease-font-size($font-size, 0.6);
+  }
+
+  @include media-md () {
+    font-size: decrease-font-size($font-size, 0.8);
+  }
+
+  @include media-lg () {
+    font-size: decrease-font-size($font-size, 1);
+  }
+}

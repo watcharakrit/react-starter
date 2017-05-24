@@ -1,0 +1,22 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Layout
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@import 'main';
+
+$color-black: #006;
+$color-white: #fff;
+$color-red: #f00;
+
+:global .app-root {
+  height: 100%;
+}
+
+.see-doctor-now {
+  height: 100%;
+  text-align: center;
+}
+
+.content {
+  margin-top: 20px;
+}

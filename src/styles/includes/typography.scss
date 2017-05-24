@@ -1,0 +1,27 @@
+// ==============================================================
+// Bases - Typography
+// ==============================================================
+
+.title {
+  @include font-size($font-size-title);
+
+  &.-sm {
+    @include font-size($font-size-title-sm);
+  }
+
+  &.-lg {
+    @include font-size($font-size-title-lg);
+  }
+}
+
+.sub-title {
+  @include font-size($font-size-subtitle);
+
+  &.-sm {
+    @include font-size($font-size-subtitle-sm);
+  }
+
+  &.-lg {
+    @include font-size($font-size-subtitle-lg);
+  }
+}

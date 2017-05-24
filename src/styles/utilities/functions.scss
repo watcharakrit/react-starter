@@ -1,0 +1,9 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Function
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+$base-image-url: '/public/images';
+
+@function image-url($path) {
+  @return url('#{$base-image-url}/#{$path}');
+}

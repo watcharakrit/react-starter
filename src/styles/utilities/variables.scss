@@ -1,0 +1,121 @@
+// ==============================================================
+// Utilities - Variables
+// ==============================================================
+
+
+// Class Prefix
+// ==============================================================
+$prefix-class: 'sdn-';
+// ==============================================================
+
+
+// Colors
+// ==============================================================\
+$color-white: #fff;
+$color-white-02: #f2f2f2;
+
+$color-black: #000;
+$color-gray: #aeaeae;
+$color-gray-02: #9a9a9a;
+$color-gray-dark: #555656;
+$color-gray-light: #f2f2f2;
+$color-gray-light-02: #e5e5e5;
+$color-gray-border: #e7e7e7;
+
+$color-red: #ff0000;
+
+$color-green: #4fb7c2;
+$color-green-succes: #13de09;
+
+$color-blue-dark: #172941;
+// $color-blue-dark: rgb(55, 78, 162);
+
+$color-purple: #465174;
+$color-purple-ci: #354EA3;
+// ==============================================================
+
+
+// Margins
+// ==============================================================
+$margin: 10px;
+$margin-md: 20px;
+$margin-lg: 30px;
+$margin-bottom: 15px;
+// ==============================================================
+
+
+// Borders
+// ==============================================================
+$border-width: 1px;
+$border-color: $color-gray-border;
+$border-radius: 5px;
+// ==============================================================
+
+// Padding
+// ==============================================================
+$padding: 10px;
+$padding-md: 20px;
+$padding-lg: 30px;
+$padding-bottom: 15px;
+$padding-container-content: 50px;
+// ==============================================================
+
+
+// Box-Shadows
+// ==============================================================
+$box-shadow: 0 0 10px $color-gray-light;
+// ==============================================================
+
+
+// Z-index
+// ==============================================================
+$z-index-under: -1;
+$z-index-sm: 0;
+$z-index-before-md: 250;
+$z-index-md: 500;
+$z-index-before-lg: 750;
+$z-index-lg: 1000;
+// ==============================================================
+
+
+// Typography
+// ==============================================================
+$font-size-notice: 10px;
+$font-size-sm: 12px;
+$font-size: 14px;
+$font-size-lg: 25px;
+
+$font-line-height: 1.4em;
+
+$min-font-size-title: 14px;
+
+$font-size-subtitle-sm: 20px;
+$font-size-subtitle: 24px;
+$font-size-subtitle-lg: 30px;
+
+$font-size-title-sm: 36px;
+$font-size-title: 48px;
+$font-size-title-lg: 60px;
+
+$font-family-system: 'Montserrat', 'thaisans_neue';
+$font-family-reading: 'Thonburi', 'tahoma';
+
+$font-size-multiply-thaisans: 1.6;
+// ==============================================================
+
+
+// Breakpoint
+// ==============================================================
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+// ==============================================================
+
+
+// Grid
+// ==============================================================
+$grid-columns: 24;
+$grid-column-width: 100 / $grid-columns;
+
+$grid-gutter: 15px;
+// ==============================================================

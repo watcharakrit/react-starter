@@ -1,0 +1,165 @@
+// ==============================================================
+// Utilities - Theme
+// ==============================================================
+
+@import 'variables';
+
+
+// themes color
+// ==============================================================
+$color-primary: $color-purple-ci;
+$color-success: $color-green-succes;
+$color-danger: $color-red;
+$color-bg-gray: $color-gray;
+$color-text-white: $color-white-02;
+$color-text-gray: $color-gray-02;
+$color-text-gray-dark: $color-gray-dark;
+$color-text-blue: $color-blue-dark;
+$color-logo-bg: $color-purple-ci;
+// ==============================================================
+
+
+// Button
+// ==============================================================
+$btn-padding-vertical: 6px;
+$btn-padding-horizontal: 12px;
+$btn-border-width: 1px;
+$btn-border-radius: $border-radius;
+$btn-border-color: $border-color;
+$btn-bg-color: $color-white;
+$btn-font-size: $font-size;
+$btn-line-height: $font-line-height;
+$btn-color: $color-black;
+
+// themes
+// --------------------------------------------------------------
+// disabled
+$btn-disabled-border-color: $color-gray;
+$btn-disabled-bg-color: $color-gray;
+$btn-disabled-color: $color-white;
+
+// primary
+$btn-primary-border-color: transparent;
+$btn-primary-bg-color: $color-primary;
+$btn-primary-color: $color-white;
+
+// cancel
+$btn-cancel-border-color: transparent;
+$btn-cancel-bg-color: #757575;
+$btn-cancel-color: $color-white;
+
+// success
+$btn-success-border-color: transparent;
+$btn-success-bg-color: $color-success;
+$btn-success-color: $color-white;
+
+// link
+$btn-link-border-color: transparent;
+$btn-link-bg-color: transparent;
+$btn-link-color: $color-primary;
+$btn-link-color-active: darken($btn-link-color, 20%);
+$btn-link-disabled-border-color: transparent;
+$btn-link-disabled-bg-color: transparent;
+$btn-link-disabled-color: rgba(0, 0, 0, 0.3);
+// --------------------------------------------------------------
+
+// sizes
+// --------------------------------------------------------------
+// small
+$btn-sm-padding-verticle: 5px;
+$btn-sm-padding-horizontal: 10px;
+$btn-sm-font-size: $font-size-sm;
+$btn-sm-line-height: $font-line-height;
+
+// large
+$btn-lg-padding-verticle: 8px;
+$btn-lg-padding-horizontal: 16px;
+$btn-lg-font-size: $font-size-lg;
+$btn-lg-line-height: $font-line-height;
+// --------------------------------------------------------------
+// ==============================================================
+
+
+
+
+
+
+
+// Forms
+// ==============================================================
+// themes
+// --------------------------------------------------------------
+// disabled
+$form-disabled-border-color: $color-white;
+$form-disabled-bg-color: $color-white;
+$form-disabled-color: $color-gray;
+// --------------------------------------------------------------
+
+// input
+// --------------------------------------------------------------
+$input-height: 34px;
+$input-margin-bottom: $margin + 2;
+$input-border-radius: 0;
+$input-padding-verticle: 6px;
+$input-padding-horizontal: 12px;
+$input-font-size: $font-size;
+$input-line-height: $font-line-height;
+
+// sizes
+// --------------------------------------------------------------
+// small
+$input-sm-height: 30px;
+$input-sm-padding-verticle: 5px;
+$input-sm-padding-horizontal: $input-padding-horizontal;
+$input-sm-font-size: $font-size-sm;
+$input-sm-line-height: $font-line-height;
+
+// large
+$input-lg-height: 40px;
+$input-lg-padding-verticle: 8px;
+$input-lg-padding-horizontal: $input-padding-horizontal;
+$input-lg-font-size: $font-size;
+$input-lg-line-height: $font-line-height;
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+
+
+// Textarea
+// --------------------------------------------------------------
+$textarea-padding-verticle: $input-padding-verticle;
+$textarea-padding-horizontal: $input-padding-horizontal;
+$textarea-font-size: $input-font-size;
+$textarea-line-height: $input-line-height;
+
+// sizes
+// --------------------------------------------------------------
+// small
+$textarea-sm-padding-verticle: $input-sm-padding-verticle;
+$textarea-sm-padding-horizontal: $input-sm-padding-horizontal;
+$textarea-sm-font-size: $input-sm-font-size;
+$textarea-sm-line-height: $input-sm-line-height;
+
+// large
+$textarea-lg-padding-verticle: $input-lg-padding-verticle;
+$textarea-lg-padding-horizontal: $input-lg-padding-horizontal;
+$textarea-lg-font-size: $input-lg-font-size;
+$textarea-lg-line-height: $input-lg-line-height;
+// --------------------------------------------------------------
+// --------------------------------------------------------------
+// ==============================================================
+
+
+
+// Headerbar
+// ==============================================================
+$header-height: 58px;
+// ==============================================================
+
+
+
+
+// Sidebar
+// ==============================================================
+$sidebar-width: 280px;
+$sidebar-header-height: $header-height;
+// ==============================================================

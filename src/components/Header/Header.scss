@@ -1,0 +1,14 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Header
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@import 'main';
+
+.header {
+  @include clearfix;
+  display: flex;
+  border-bottom: 1px solid $border-color;
+  height: $header-height;
+  align-items: center;
+  justify-content: center;
+}

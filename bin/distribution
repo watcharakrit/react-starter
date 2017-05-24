@@ -1,0 +1,13 @@
+#!/bin/sh
+
+DIST_DIRECTORY=./dist
+
+if [ -d "$DIST_DIRECTORY" ]; then
+  rm -rf $DIST_DIRECTORY
+fi
+
+./node_modules/.bin/webpack -P --config=./webpack.production.js
+mkdir $DIST_DIRECTORY
+mv ./builds $DIST_DIRECTORY
+cp index.html $DIST_DIRECTORY
+cp -r public $DIST_DIRECTORY
