@@ -19,10 +19,11 @@ import {
  * --------------------------------------------------------
  */
 export default function Layout(props) {
+  const { children } = props;
   return (
     <div className={styles['see-doctor-now']}>
       <Header />
-      <div className={styles['content']}>Content</div>
+      <div className={styles['content']}>{ children }</div>
     </div>
   );
 }

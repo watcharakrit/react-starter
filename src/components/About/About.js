@@ -7,23 +7,19 @@
 import React, { PropTypes } from 'react';
 
 import Image from 'components/Image';
-import styles from './Home.scss';
+import styles from './About.scss';
+
+export default About;
 
 /**
  * --------------------------------------------------------
  * Stateless component
  * --------------------------------------------------------
  */
-export default class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render () {
-    return (
-      <section className={styles['home-page']}>
-        <h1>Home Page</h1>
-      </section>
-    );
-  }
+function About(props) {
+  return (
+    <section className={styles['home-page']}>
+      <h1>About Page</h1>
+    </section>
+  );
 }

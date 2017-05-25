@@ -16,7 +16,8 @@ import Layout from 'Layouts/main';
 
 // components
 import {
-  Home
+  Home,
+  About
 } from 'components';
 
 /**
@@ -43,6 +44,7 @@ export function renderApp(mountNodeId, store, history) {
       <Router history={history}>
         <Route path="/" component={Layout}>
           <IndexRoute component={Home} />
+          <Route path="about" component={About}></Route>
         </Route>
       </Router>
     </Provider>,

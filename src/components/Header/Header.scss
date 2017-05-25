@@ -6,9 +6,21 @@
 
 .header {
   @include clearfix;
-  display: flex;
+  // display: flex;
   border-bottom: 1px solid $border-color;
-  height: $header-height;
-  align-items: center;
-  justify-content: center;
+  padding-top: 20px;
+  min-height: $header-height;
+  text-align: center;
+  // align-items: center;
+  // justify-content: center;
+}
+
+.nav {
+  a {
+    margin: 0 5px;
+
+    &:global(.active) {
+      color: $color-red;
+    }
+  }
 }
