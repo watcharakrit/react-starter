@@ -14,10 +14,11 @@ import 'helpers/touchClass';
 // container
 import Layout from 'Layouts/main';
 
-// components
+// components Pages
 import {
   Home,
-  About
+  About,
+  Products
 } from 'components';
 
 /**
@@ -45,6 +46,9 @@ export function renderApp(mountNodeId, store, history) {
         <Route path="/" component={Layout}>
           <IndexRoute component={Home} />
           <Route path="about" component={About}></Route>
+          <Route path="products">
+            <Route path=":id" component={Products} />
+          </Route>
         </Route>
       </Router>
     </Provider>,

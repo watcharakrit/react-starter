@@ -1,0 +1,84 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Home
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@import 'main';
+
+$_font-size: $font-size-lg;
+$_font-size-event: ($font-size-lg * 0.8);
+$_specialist-label-height: 30px;
+$_specialist-label-border-radius: $_specialist-label-height / 2;
+
+.home-page {
+  font-family: $font-family-system;
+}
+
+.today-header {
+  position: relative;
+  border-bottom: $border-width solid $border-color;
+  padding-top: $padding-container-content;
+  padding-left: $padding-container-content;
+  height: 220px;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 35%;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(237,237,237,0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(237,237,237,0)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(237,237,237,0) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(237,237,237,0) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(237,237,237,0) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(237,237,237,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+    content: '';
+  }
+}
+
+.bg-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.doctorname {
+  display: flex;
+  position: relative;
+  z-index: $z-index-md;
+  margin: 0;
+  margin-bottom: 70px;
+  text-transform: capitalize;
+  line-height: 0.9;
+  color: $color-gray-dark;
+  font-family: $font-family-system;
+  font-size: $_font-size;
+  align-items: center;
+}
+
+.specialist-label {
+  display: flex;
+  margin-left: 20px;
+  border-radius: $_specialist-label-border-radius;
+  background-color: $color-gray-light;
+  padding: 0 20px;
+  height: $_specialist-label-height;
+  text-transform: capitalize;
+  color: $color-gray-dark;
+  font-size: $font-size;
+  align-items: center;
+}
+
+.label-event {
+  margin: 0;
+  font-size: $_font-size-event;
+}
+
+.upnext-event {
+  position: relative;
+  color: $color-gray-dark;
+  font-size: $_font-size;
+}
