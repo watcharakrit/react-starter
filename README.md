@@ -1,4 +1,4 @@
-# Saneha
+# React Starter
 Single Page Application (SPA) with React and Redux.
 
 ### Requirement
