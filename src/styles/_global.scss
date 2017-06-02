@@ -2,8 +2,8 @@
 // Global
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-@import './includes/thaisans-neue';
-@import './includes/icons-sdn';
+@import './includes/calluna';
+@import './includes/snell-roundhand';
 
 :global {
   @import './includes/touch';
@@ -32,48 +32,5 @@
     margin: 0;
     padding: 0;
     height: 100%;
-  }
-
-  .sdn-logo {
-    display: flex;
-    border-radius: $border-radius * 2;
-    background-color: $color-logo-bg;
-    color: $color-white;
-    align-items: center;
-    justify-content: center;
-
-    &.-sm {
-      width: 40px;
-      height: 40px;
-
-      i { font-size: 27px; }
-    }
-
-    &.-lg {
-      border-radius: $border-radius * 4;
-      width: 100px;
-      height: 100px;
-
-      i { font-size: 72px; }
-    }
-  }
-
-  .profile-pic {
-    position: relative;
-    border: 1px solid $color-primary;
-    border-radius: 50%;
-    background-color: $color-bg-gray;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 72px;
-    height: 72px;
-    overflow: hidden;
-    flex-shrink: 0;
-
-    &.-sm {
-      width: 33px;
-      height: 33px;
-    }
   }
 }
